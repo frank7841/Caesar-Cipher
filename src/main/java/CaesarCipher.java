@@ -53,6 +53,8 @@ public class CaesarCipher {
 
      return encString;
     }
-
+    public String decryptText(String shiftDirection, int shiftBy){
+        return decString;
+    }
 }
 
