@@ -69,6 +69,9 @@ public class CaesarCipher {
                             if ((x+shiftBy)>=alphabets.length){
                                 decString+=alphabets[x-26+shiftBy];
                             }
+                            else{
+                                decString+=alphabets[x+shiftBy];
+                            }
 
                         }
                     }
