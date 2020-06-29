@@ -14,6 +14,8 @@ public class CaesarCipher {
         return inputString;
     }
     public String encryptText(String shiftDirection, int shiftBy){
+        String[] broken = inputString.split("");
+
      return encString;
     }
 }
