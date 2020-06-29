@@ -40,5 +40,11 @@ public class CaesarCipherTest {
         CaesarCipher cipher = new CaesarCipher("a b");
         assertEquals("c d", cipher.encryptText("right",2));
     }
+    @Test
+    public void encryptText_dealingWithNonAlphabets_String() {
+        CaesarCipher cipher = new CaesarCipher("1-2.3");
+        assertEquals("1-2.3", cipher.encryptText("right",3));
+    }
+
 
 }
