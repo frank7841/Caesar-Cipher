@@ -55,29 +55,38 @@ public class CaesarCipher {
     }
     public String decryptText(String shiftDirection, int shiftBy){
         String[] brokenString = inputString.split("");
+
         for(String letter : brokenString){
             if(letter.contains(" ")){
-                decString+=" ";
+                decString += " ";
             }
-            else if(letter.matches("^a-zA-Z")){
+            else if(letter.matches("[^a-zA-Z]")){
                 decString += letter;
             }
             else {
                 if(shiftDirection.equalsIgnoreCase("right")){
-                    for(int x = 0; x<alphabets.length; x++){
+                    for(int x = 0; x < alphabets.length; x++){
                         if (letter.equalsIgnoreCase(alphabets[x])){
-                            if ((x+shiftBy)>=alphabets.length){
-                                decString+=alphabets[x-26+shiftBy];
+                            if ((x+shiftBy) >= alphabets.length){
+                                decString += alphabets[x-26 + shiftBy];
                             }
                             else{
-                                decString+=alphabets[x+shiftBy];
+                                decString += alphabets[x + shiftBy];
                             }
 
                         }
                     }
                 }
-                else{
-
+                else {
+                    for (int x = alphabets.length - 1; x >= 0; x--) {
+                        if (letter.equalsIgnoreCase(alphabets[x])) {
+                            if ((x - shiftBy) < 0) {
+                                decString += alphabets[x + 26 - shiftBy];
+                            } else {
+                                decString += alphabets[x - shiftBy];
+                            }
+                        }
+                    }
                 }
             }
         }

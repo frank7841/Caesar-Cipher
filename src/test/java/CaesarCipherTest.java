@@ -68,8 +68,8 @@ public class CaesarCipherTest {
     }
     @Test
     public void decryptText_decryptShiftBeyondA_String() {
-        CaesarCipher cipher = new CaesarCipher("ukambu epa the");
-        assertEquals("umbaku the ape", cipher.decryptText("left",5));
+        CaesarCipher cipher = new CaesarCipher("fyyfhp fy ifbs");
+        assertEquals("attack at dawn", cipher.decryptText("left",5));
     }
 
 }
