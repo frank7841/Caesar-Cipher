@@ -35,5 +35,10 @@ public class CaesarCipherTest {
         CaesarCipher cipher = new CaesarCipher("z");
         assertEquals("a", cipher.encryptText("right",1));
     }
+    @Test
+    public void encryptText_encryptWhitespaces_String() {
+        CaesarCipher cipher = new CaesarCipher("a b");
+        assertEquals("c d", cipher.encryptText("right",2));
+    }
 
 }
