@@ -16,9 +16,9 @@ public class CaesarCipherTest {
         assertEquals("testing Input String", cipher.getInputString());
         }
     @Test
-    public void encriptText_receiveInput_String(){
+    public void encryptText_receiveInput_String(){
         CaesarCipher cipher = new CaesarCipher("testing");
-        assertEquals(cipher.encriptText("right",1) instanceof String);
+        assertTrue(cipher.encryptText("right",1) instanceof String);
     }
 
 

@@ -13,5 +13,8 @@ public class CaesarCipher {
     public String getInputString() {
         return inputString;
     }
+    public String encryptText(String shiftDirection, int shiftBy){
+     return encString;
+    }
 }
 
