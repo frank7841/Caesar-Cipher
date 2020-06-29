@@ -15,7 +15,11 @@ public class CaesarCipherTest {
         CaesarCipher cipher = new CaesarCipher("testing Input String");
         assertEquals("testing Input String", cipher.getInputString());
         }
-
+    @Test
+    public void encriptText_receiveInput_String(){
+        CaesarCipher cipher = new CaesarCipher("testing");
+        assertEquals(cipher.encriptText("right",1) instanceof String);
+    }
 
 
 }
