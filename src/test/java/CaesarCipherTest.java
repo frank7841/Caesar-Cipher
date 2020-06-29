@@ -45,6 +45,11 @@ public class CaesarCipherTest {
         CaesarCipher cipher = new CaesarCipher("1-2.3");
         assertEquals("1-2.3", cipher.encryptText("right",3));
     }
+    @Test
+    public void runEncrypt_shiftLettersToLeftBy1_String() {
+        CaesarCipher cipher = new CaesarCipher("b");
+        assertEquals("a", cipher.encryptText("left",1));
+    }
 
 
 }
