@@ -61,4 +61,9 @@ public class CaesarCipherTest {
         CaesarCipher cipher = new CaesarCipher("z");
         assertEquals("a", cipher.decryptText("right",1));
     }
+    @Test
+    public void decryptText_decryptShiftByTwo_String() {
+        CaesarCipher cipher = new CaesarCipher("cd");
+        assertEquals("ef", cipher.decryptText("right",2));
+    }
 }
