@@ -56,5 +56,9 @@ public class CaesarCipherTest {
         assertTrue(cipher.decryptText("right", 1) instanceof String);
     }
 
-
+    @Test
+    public void decryptText_decryptShiftByOne_String() {
+        CaesarCipher cipher = new CaesarCipher("z");
+        assertEquals("a", cipher.decryptText("right",1));
+    }
 }
