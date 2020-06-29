@@ -46,9 +46,14 @@ public class CaesarCipherTest {
         assertEquals("1-2.3", cipher.encryptText("right",3));
     }
     @Test
-    public void runEncrypt_shiftLettersToLeftBy1_String() {
+    public void encryptText_shiftLettersToLeftBy1_String() {
         CaesarCipher cipher = new CaesarCipher("b");
         assertEquals("a", cipher.encryptText("left",1));
+    }
+    @Test
+    public void decryptText_receiveInput_String(){
+        CaesarCipher cipher = new CaesarCipher("testing");
+        assertTrue(cipher.decryptText("right", 1) instanceof String);
     }
 
 
