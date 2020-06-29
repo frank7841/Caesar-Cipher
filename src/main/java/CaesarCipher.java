@@ -15,6 +15,15 @@ public class CaesarCipher {
     }
     public String encryptText(String shiftDirection, int shiftBy){
         String[] broken = inputString.split("");
+        for(String letter:broken ){
+            if(letter.contains("")){
+                encString += " ";
+            }
+            else if(letter.matches("[^a-zA-Z]")) {
+                encString+=letter;
+
+            }
+        }
 
      return encString;
     }
