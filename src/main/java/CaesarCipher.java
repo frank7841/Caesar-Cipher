@@ -10,5 +10,8 @@ public class CaesarCipher {
         this.decString = "";
     }
 
+    public String getInputString() {
+        return inputString;
+    }
 }
 

@@ -12,8 +12,8 @@ public class CaesarCipherTest {
     }
     @Test
     public void getInputString_returnString_String(){
-        CaesarCipher cipher = new CaesarCipher("testing Input String")
-        assertEquals("testing Input String", cipher.getInputString())
+        CaesarCipher cipher = new CaesarCipher("testing Input String");
+        assertEquals("testing Input String", cipher.getInputString());
         }
 
 
