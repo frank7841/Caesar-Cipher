@@ -30,6 +30,10 @@ public class CaesarCipherTest {
         CaesarCipher cipher = new CaesarCipher("a");
         assertEquals("c", cipher.encryptText("right",2));
     }
-
+    @Test
+    public void encryptText_shiftLettersBeyondZ_String() {
+        CaesarCipher cipher = new CaesarCipher("z");
+        assertEquals("a", cipher.encryptText("right",1));
+    }
 
 }
