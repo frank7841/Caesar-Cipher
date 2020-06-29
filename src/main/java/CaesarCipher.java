@@ -54,6 +54,27 @@ public class CaesarCipher {
      return encString;
     }
     public String decryptText(String shiftDirection, int shiftBy){
+        String[] brokenString = inputString.split("");
+        for(String letter : brokenString){
+            if(letter.contains(" ")){
+                decString+=" ";
+            }
+            else if(letter.matches("^a-zA-Z")){
+                decString += letter;
+            }
+            else {
+                if(shiftDirection.equalsIgnoreCase("right")){
+                    for(int x = 0; x<alphabets.length; x++){
+                        if (letter.equalsIgnoreCase(alphabets[x])){
+                            if ((x+shiftBy)>=alphabets.length){
+                                decString+=alphabets[x-26+shiftBy];
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
         return decString;
     }
 }
