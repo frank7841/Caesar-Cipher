@@ -25,6 +25,11 @@ public class CaesarCipherTest {
         CaesarCipher cipher = new CaesarCipher("a");
         assertEquals("b", cipher.encryptText("right",1));
     }
+    @Test
+    public void encryptText_shiftLettersByTwo_String() {
+        CaesarCipher cipher = new CaesarCipher("a");
+        assertEquals("c", cipher.encryptText("right",2));
+    }
 
 
 }
