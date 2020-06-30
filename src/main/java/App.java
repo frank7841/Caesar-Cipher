@@ -28,6 +28,15 @@ public class App {
 
                     }
                 }
+                System.out.println("How many characters do you want to shift your information to the "+ userDirection);
+                int userShift = value.nextInt();
+                CaesarCipher cipher = new CaesarCipher(userInput);
+                System.out.println("Your input is : "+userInput);
+                System.out.println("Your Encrypted Input is "+ cipher.encryptText(userDirection, userShift));
+
+
+            }
+            else if(selection==2){
 
             }
         }
