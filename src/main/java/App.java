@@ -59,7 +59,13 @@ public class App {
 
             }
             else if(selection ==3){
+                header=false;
+            }
+            else{
+                System.out.println("Please Enter a recognised input")
+                }
 
             }
+        value.close();
         }
     }
