@@ -37,8 +37,29 @@ public class App {
 
             }
             else if(selection==2){
+                System.out.println("Insert what you want to decrypt: ");
+                String userInput = value.nextLine();
+                System.out.println("In what direction would you want to decrypt your information: Right or Left ");
+                String userDirection = "";
+                boolean validDirection = true;
+                while(validDirection) {
+                    userDirection = value.nextLine();
+                    if (!userDirection.equalsIgnoreCase("right") && !userDirection.equalsIgnoreCase("left")) {
+                        System.out.println("Select a direction by typing either left or right");
+                    } else {
+                        validDirection=false;
+
+                    }
+                }
+                System.out.println("How many characters do you want to shift your information to the "+ userDirection);
+                int userShift = value.nextInt();
+                CaesarCipher cipher = new CaesarCipher(userInput);
+                System.out.println("Your input is : "+userInput);
+                System.out.println("Your Decrypted Input is "+ cipher.decryptText(userDirection, userShift));
+
+            }
+            else if(selection ==3){
 
             }
         }
     }
-}
